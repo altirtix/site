@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Міні-сад на підвіконні</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f8ff; }
+    header, footer { background-color: #228B22; color: white; padding: 20px; text-align: center; }
+    nav { background-color: #32CD32; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; }
+    section { padding: 20px; }
+    img { max-width: 100%; height: auto; border: 2px solid #228B22; }
+    button { background-color: #32CD32; color: white; border: none; padding: 10px 20px; cursor: pointer; }
+  </style>
+  <script>
+    function addPlant() {
+      let plant = prompt("Введіть назву нової рослини для міні-саду:");
+      if(plant) {
+        let list = document.getElementById("plants");
+        let item = document.createElement("li");
+        item.textContent = plant;
+        list.appendChild(item);
+        alert("Рослина додана: " + plant);
+      }
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <h1>Міні-сад на підвіконні</h1>
+</header>
+
+<nav>
+  <a href="#">Головна</a>
+  <a href="#">Рослини</a>
+  <a href="#">Контакти</a>
+</nav>
+
+<main>
+  <section>
+    <h2>Мій міні-сад</h2>
+    <p>Це невеликий проект для облаштування міні-саду на підвіконні. Додати власні рослини можна за допомогою кнопки.</p>
+    <img src="https://via.placeholder.com/400x200?text=Mini+Garden" alt="Міні-сад">
+    <br><br>
+    <button onclick="addPlant()">Додати рослину</button>
+    <ul id="plants"></ul>
+  </section>
+</main>
+
+<footer>
+  <p>Автор: Приклад</p>
+</footer>
+
+</body>
+</html>
